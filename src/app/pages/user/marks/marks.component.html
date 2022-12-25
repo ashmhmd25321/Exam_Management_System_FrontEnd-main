@@ -1,0 +1,42 @@
+<mat-card class="bg-color mt20">
+    <h1>EXAM MARKS</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+
+                <!-- {{user | json}} -->
+
+                <div class="row text-center">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table Details -->
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Paper</th>
+                                    <th>Marks</th>
+                                    <th>Date</th>
+                                    <th style="color: brown;">Remove</th>
+                                </tr>
+                            </thead>
+                            <tbody  *ngFor="let m of marks">
+                                <tr>
+                                    <td>{{m.subjectName}}</td>
+                                    <td>{{m.qName}}</td>
+                                    <td>{{m.marks}}</td>
+                                    <td>{{m.date}}</td>
+                                    <td>
+                                        <button mat-list-item style="color: red;">
+                                            <mat-icon mat-list-icon>delete</mat-icon>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

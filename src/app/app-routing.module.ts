@@ -19,6 +19,7 @@ import { UserGuard } from './pages/services/user.guard';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
+import { MarksComponent } from './pages/user/marks/marks.component';
 import { PaperInstructionsComponent } from './pages/user/paper-instructions/paper-instructions.component';
 import { StartComponent } from './pages/user/start/start.component';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
@@ -111,6 +112,10 @@ const routes: Routes = [
       {
         path: 'instructions/:qid',
         component: PaperInstructionsComponent,
+      },
+      {
+        path: 'marks/:username',
+        component: MarksComponent,
       },
     ],
   },

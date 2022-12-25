@@ -45,6 +45,7 @@ import { UpdateCategoryComponent } from './pages/admin/update-category/update-ca
 import { UpdateProfileComponent } from './pages/update-profile/update-profile.component';
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MarksComponent } from './pages/user/marks/marks.component';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     UpdateCategoryComponent,
     UpdateProfileComponent,
     UpdateQuestionComponent,
+    MarksComponent,
   ],
   imports: [
     BrowserModule,
