@@ -1,0 +1,31 @@
+<mat-card class="bg-color mt20">
+    <mat-action-list>
+
+        <div mat-subheader>Menu</div>
+
+        <button mat-list-item routerLink="/user-dashboard/profile">
+            <mat-icon mat-list-icon>account_circle</mat-icon> Profile
+        </button>
+
+        <button mat-list-item routerLink="/user-dashboard/0">
+            <mat-icon mat-list-icon>import_contacts</mat-icon> All Subjects
+        </button>
+
+        <button mat-list-item>
+            <mat-icon mat-list-icon>assessment</mat-icon> My Marks
+        </button>
+
+        <button mat-list-item>
+            <mat-icon mat-list-icon>online_prediction</mat-icon> Prediction
+        </button>
+
+        <mat-divider></mat-divider>
+
+        <h3 class="mt20">Subjects</h3>
+
+        <button mat-list-item [routerLink]="'/user-dashboard/'+c.cid" *ngFor="let c of categories">
+            <mat-icon mat-list-icon>subject</mat-icon> {{c.title}}
+        </button>
+
+    </mat-action-list>
+</mat-card>

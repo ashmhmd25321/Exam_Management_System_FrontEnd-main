@@ -1,0 +1,15 @@
+.nav-color {
+    background-color: rgb(243, 210, 112);
+}
+
+.left-align {
+    margin-left: 700px;
+    margin-top: -400px;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: larger;
+  }
