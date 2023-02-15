@@ -95,9 +95,77 @@
                 </mat-card-content>
                 <mat-card-actions class="text-center">
                     <!-- <button mat-raised-button color="primary"><mat-icon>print</mat-icon>Print</button> -->
-                    <button mat-raised-button color="accent" [routerLink]="'/user-dashboard/0'"><mat-icon>home</mat-icon>Home</button>
+                    
                     <button mat-raised-button color="primary"  (click)="reloadCurrentPage()" ><mat-icon> rocket </mat-icon>
                         Try Again</button>
+
+                <div style="padding-top: 20px;">
+                    <form (ngSubmit)="addMarks()">
+
+                        <h3>Enter the values given in relevant fields to confirm</h3>
+                        
+                        <p style="margin-top: 20px;">{{marksGot}}</p>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <input
+                            [(ngModel)]="marksData.marks"
+                            name="marks"
+                             required matInput placeholder="Enter Marks Here" value="{{marksGot}}">
+                          </mat-form-field>
+                          
+
+                          <p>{{questions[0].quiz.title}}</p>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <input
+                            [(ngModel)]="marksData.qName"
+                            name="qName"
+                             required matInput placeholder="Enter Paper Name Here">
+                          </mat-form-field>
+                          
+
+                          <p>{{questions[0].quiz.qid}}</p>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <input
+                            [(ngModel)]="marksData.qId"
+                            name="qId"
+                             required matInput placeholder="Enter Paper ID Here">
+                          </mat-form-field>
+                          
+
+                          <p>{{questions[0].quiz.category.cid}}</p>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <input
+                            [(ngModel)]="marksData.subjectId"
+                            name="subjectId"
+                             required matInput placeholder="Enter Subject ID Here">
+                          </mat-form-field>
+                          
+
+                          <p>{{questions[0].quiz.category.title}}</p>
+                          <mat-form-field class="full-width" appearance="outline">
+                            
+                            <input
+                            [(ngModel)]="marksData.subjectName"
+                            name="subjectName"
+                             required matInput placeholder="Enter Subject Name Here">
+                          </mat-form-field>
+                          
+                          <p>{{currentDate | date:'MM-dd-yyyy'}}</p>
+                          <mat-form-field class="full-width" appearance="outline">
+                            <input
+                            [(ngModel)]="marksData.date"
+                            name="date"
+                            type="date"
+                             required matInput placeholder="Enter Date Here">
+                          </mat-form-field>
+                          
+                          <div class="container text-center">
+                        <button type="submit" mat-raised-button color="primary"><mat-icon> add </mat-icon>
+                            Add Marks</button>
+
+                            <button mat-raised-button color="accent" [routerLink]="'/user-dashboard/0'"><mat-icon>home</mat-icon>Home</button>
+                          </div>
+                    </form>
+                </div>
                 </mat-card-actions>
             </mat-card>
         </div>

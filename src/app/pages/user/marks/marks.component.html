@@ -26,7 +26,7 @@
                                     <td>{{m.marks}}</td>
                                     <td>{{m.date}}</td>
                                     <td>
-                                        <button mat-list-item style="color: red;">
+                                        <button mat-list-item style="color: red;" (click)="deleteMark(m.markId)">
                                             <mat-icon mat-list-icon>delete</mat-icon>
                                         </button>
                                     </td>

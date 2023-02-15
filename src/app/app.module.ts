@@ -46,6 +46,7 @@ import { UpdateProfileComponent } from './pages/update-profile/update-profile.co
 import { UpdateQuestionComponent } from './pages/admin/update-question/update-question.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MarksComponent } from './pages/user/marks/marks.component';
+import { SafePipe } from './safe.pipe';
 
 
 @NgModule({
@@ -76,6 +77,7 @@ import { MarksComponent } from './pages/user/marks/marks.component';
     UpdateProfileComponent,
     UpdateQuestionComponent,
     MarksComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

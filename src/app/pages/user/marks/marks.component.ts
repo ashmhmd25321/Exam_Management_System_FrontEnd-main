@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import Swal from 'sweetalert2';
 import { LoginService } from '../../services/login.service';
 import { MarksService } from '../../services/marks.service';
 
@@ -49,5 +50,17 @@ export class MarksComponent implements OnInit {
 
     })
   }
+
+  deleteMark(markId:any) {
+    this._marks.deleteMarks(markId).subscribe(
+      (data)=>{
+        this.marks = this.marks.filter((mark: { markId: any; })=>mark.markId != markId);
+        Swal.fire('Success', 'Mark Deleted', 'success');
+    },
+    (error)=>{
+      Swal.fire('Error', "Error in deleteing mark", 'error');
+    }
+    )
+  };
 
 }
